@@ -41,4 +41,10 @@ export class StudentListComponent implements OnInit {
     this.router.navigate(['update', id])
   }
 
+  getStudentsByName() {
+    console.log('here');
+    this.students = this.studentService.getStudentsByName(this.name);
+  }
+
+
 }
