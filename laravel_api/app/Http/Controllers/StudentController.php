@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Servcies\StudentService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
 {
@@ -47,5 +48,11 @@ class StudentController extends Controller
         $dataStudent = $this->studentService->destroy($id);
 
         return response()->json($dataStudent['message'], $dataStudent['statusCode']);
+    }
+
+    public function search($key)
+    {
+        $students = DB::table('students')->where('name','like','%'.$key.'%')->get();
+        return response()->json($students,200);
     }
 }

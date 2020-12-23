@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea2f757e-63c5-4c9a-9bfa-4bd3dc789f7d" name="Default Changelist" comment="" />
+    <list default="true" id="ea2f757e-63c5-4c9a-9bfa-4bd3dc789f7d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/services/student.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/services/student.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/student-list/student-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/student-list/student-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-management/src/app/student-list/student-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../student-management/src/app/student-list/student-list.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +19,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -166,6 +173,7 @@
       <workItem from="1608606691401" duration="638000" />
       <workItem from="1608609196088" duration="40000" />
       <workItem from="1608610206147" duration="4831000" />
+      <workItem from="1608706778963" duration="395000" />
     </task>
     <servers />
   </component>
