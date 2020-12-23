@@ -30,4 +30,8 @@ export class StudentService {
   getStudentsList(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
+
+  getStudentsByName(name: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/search/${name}`);
+  }
 }
