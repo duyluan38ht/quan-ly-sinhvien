@@ -37,4 +37,8 @@ export class StudentListComponent implements OnInit {
     this.router.navigate(['details', id]);
   }
 
+  updateStudent(id: number){
+    this.router.navigate(['update', id])
+  }
+
 }
