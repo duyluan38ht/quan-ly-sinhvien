@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StudentRequest;
 use App\Http\Servcies\StudentService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -29,11 +30,13 @@ class StudentController extends Controller
         return response()->json($dataStudent['students'], $dataStudent['statusCode']);
     }
 
-    public function store(Request $request)
+    public function store(StudentRequest $request)
     {
-        $dataStudent = $this->studentService->create($request->all());
+
+         $dataStudent = $this->studentService->create($request->all());
 
         return response()->json($dataStudent['students'], $dataStudent['statusCode']);
+
     }
 
     public function update(Request $request, $id)

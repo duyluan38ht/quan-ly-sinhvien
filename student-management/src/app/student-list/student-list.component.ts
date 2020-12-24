@@ -12,6 +12,7 @@ import { Student } from '../Student';
 export class StudentListComponent implements OnInit {
 
   students!: Observable<Student[]>;
+  name!: string;
 
   constructor(private studentService: StudentService,
     private router: Router) {}

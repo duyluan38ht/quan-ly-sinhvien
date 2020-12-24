@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
-
+import { StudentCreateComponent} from './student-create/student-create.component'
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     StudentDetailsComponent,
-    UpdateStudentComponent
+    UpdateStudentComponent,
+    StudentCreateComponent
   ],
   imports: [
     BrowserModule,

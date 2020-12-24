@@ -43,7 +43,7 @@ class StudentServiceImpl implements StudentService
     public function create($request)
     {
         $student = $this->studentRepository->create($request);
-
+        
         $statusCode = 201;
         if (!$student)
             $statusCode = 500;
