@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NotificationService } from '../notification.service';
 import { StudentService } from '../services/student.service';
 import { Student } from '../Student';
 
@@ -14,9 +15,24 @@ export class StudentCreateComponent implements OnInit {
   submitted = false;
 
   constructor(private studentService: StudentService,
-    private router: Router) { }
+    private router: Router, private notifyService: NotificationService) { }
 
-
+    showToasterSuccess(){
+      this.notifyService.showSuccess("Student created successfully !!", "Success")
+      console.log(1)
+  }
+  
+  showToasterError(){
+      this.notifyService.showError("Something is wrong", "Failed")
+  }
+  
+  showToasterInfo(){
+      this.notifyService.showInfo("This is info", "ItSolutionStuff.com")
+  }
+  
+  showToasterWarning(){
+      this.notifyService.showWarning("This is warning", "ItSolutionStuff.com")
+  }
     
   ngOnInit() {
   }
@@ -38,6 +54,7 @@ export class StudentCreateComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.save();
+    this.showToasterSuccess();
   }
 
   gotoList() {
