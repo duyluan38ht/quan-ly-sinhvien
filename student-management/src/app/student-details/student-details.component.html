@@ -1,3 +1,4 @@
+<div class="container">
 <h2>Employee Details</h2>
 
 <hr/>
@@ -18,4 +19,9 @@
 
 <br>
 <br>
-<button (click)="list()" class="btn btn-primary">Back to Student List</button><br>
+<button (click)="updateStudent(student.id)" class="btn btn-warning" style="width: 150px;">
+Edit this student
+  </button>
+  <div>
+<button (click)="list()" class="btn btn-primary" style="width: 150px;">Back to Student List</button>
+</div>

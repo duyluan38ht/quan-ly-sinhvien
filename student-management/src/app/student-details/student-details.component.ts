@@ -27,7 +27,9 @@ export class StudentDetailsComponent implements OnInit {
         this.student = data;
       }, error => console.log(error));
   }
-
+  updateStudent(id: number){
+    this.router.navigate(['update', id])
+  }
   list(){
     this.router.navigate(['students']);
   }

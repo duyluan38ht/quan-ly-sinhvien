@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { StudentCreateComponent} from './student-create/student-create.component'
-import { from } from 'rxjs';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,9 @@ import { from } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
