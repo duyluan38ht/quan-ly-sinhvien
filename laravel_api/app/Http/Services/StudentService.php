@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Servcies;
+namespace App\Http\Services;
 
 
 interface StudentService

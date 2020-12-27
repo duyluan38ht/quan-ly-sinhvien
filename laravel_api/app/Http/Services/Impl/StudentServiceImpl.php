@@ -5,7 +5,7 @@ namespace App\Http\Servcies\Impl;
 
 
 use App\Http\Repositories\StudentRepository;
-use App\Http\Servcies\StudentService;
+use App\Http\Services\StudentService;
 
 class StudentServiceImpl implements StudentService
 {
