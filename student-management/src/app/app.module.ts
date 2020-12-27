@@ -10,21 +10,21 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { StudentCreateComponent} from './student-create/student-create.component'
 import { ToastrModule } from 'ngx-toastr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     StudentDetailsComponent,
     UpdateStudentComponent,
-    StudentCreateComponent
+    StudentCreateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
-
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { NotificationService } from '../notification.service';
 import { StudentService } from '../services/student.service';
 import { Student } from '../Student';
 
@@ -15,7 +16,7 @@ export class StudentListComponent implements OnInit {
   name!: string;
 
   constructor(private studentService: StudentService,
-    private router: Router) {}
+    private router: Router, private notifyService: NotificationService) {}
 
   ngOnInit() {
     this.reloadData();
@@ -30,6 +31,7 @@ export class StudentListComponent implements OnInit {
         data => {
           console.log(data);
           this.reloadData();
+          this.showToasterSuccess();
         },
         error => console.log(error));
   }
@@ -46,6 +48,23 @@ export class StudentListComponent implements OnInit {
     console.log('here');
     this.students = this.studentService.getStudentsByName(this.name);
   }
+
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Student deleted successfully !!", "Success")
+    console.log(1)
+}
+
+showToasterError(){
+    this.notifyService.showError("Something is wrong", "Failed")
+}
+
+showToasterInfo(){
+    this.notifyService.showInfo("This is info", "ItSolutionStuff.com")
+}
+
+showToasterWarning(){
+    this.notifyService.showWarning("This is warning", "ItSolutionStuff.com")
+}
 
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NotificationService } from '../notification.service';
 import { StudentService } from '../services/student.service';
 import { Student } from '../Student';
 
@@ -14,7 +15,7 @@ export class UpdateStudentComponent implements OnInit {
   public submitted: boolean | undefined;
 
   constructor(private route: ActivatedRoute, private router: Router,
-    private studentService: StudentService) { }
+    private studentService: StudentService, private notifyService: NotificationService) { }
 
   ngOnInit() {
     this.student = new Student();
@@ -34,6 +35,7 @@ export class UpdateStudentComponent implements OnInit {
         console.log(data);
         this.student = new Student();
         this.gotoList();
+        this.showToasterSuccess();
       }, error => console.log(error));
   }
 
@@ -44,5 +46,22 @@ export class UpdateStudentComponent implements OnInit {
   gotoList() {
     this.router.navigate(['/students']);
   }
+
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Student updated successfully !!", "Success")
+    console.log(1)
+}
+
+showToasterError(){
+    this.notifyService.showError("Something is wrong", "Failed")
+}
+
+showToasterInfo(){
+    this.notifyService.showInfo("This is info", "ItSolutionStuff.com")
+}
+
+showToasterWarning(){
+    this.notifyService.showWarning("This is warning", "ItSolutionStuff.com")
+}
 
 }

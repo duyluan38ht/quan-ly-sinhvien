@@ -17,7 +17,7 @@ export class StudentCreateComponent implements OnInit {
   constructor(private studentService: StudentService,
     private router: Router, private notifyService: NotificationService) { }
 
-    showToasterSuccess(){
+  showToasterSuccess(){
       this.notifyService.showSuccess("Student created successfully !!", "Success")
       console.log(1)
   }
