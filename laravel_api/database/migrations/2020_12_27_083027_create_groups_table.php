@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnStudentsTable extends Migration
+class CreateGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class AddColumnStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::table('students', function (Blueprint $table){
-           $table->string('image')->after('address')->nullable();
+        Schema::create('groups', function (Blueprint $table) {
+            $table->id();
+            $table->string('classname');
+            $table->string('classtype');
+            $table->timestamps();
         });
+
     }
 
     /**
@@ -25,6 +29,6 @@ class AddColumnStudentsTable extends Migration
      */
     public function down()
     {
-
+        Schema::dropIfExists('groups');
     }
 }

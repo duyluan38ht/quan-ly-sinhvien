@@ -2,25 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StudentRequest;
-use App\Http\Services\StudentService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class StudentController extends Controller
+class GroupController extends Controller
 {
-    protected $studentService;
+    protected $groupService;
 
-    public function __construct(StudentService $studentService)
+    public function __construct(GroupService $groupService)
     {
-        $this->studentService = $studentService;
+        $this->groupService = $groupService;
     }
 
     public function index()
     {
-        $students = $this->studentService->getAll();
+        $groups = $this->groupService->getAll();
 
-        return response()->json($students, 200);
+        return response()->json($groups, 200);
     }
 
     public function show($id)
